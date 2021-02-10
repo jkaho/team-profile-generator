@@ -6,6 +6,12 @@ const mock = jest.spyOn(inquirer, "prompt");
 mock.mockImplementation(() => Promise.resolve((answer) => answer.employeeName = 'Bob'));
 
 describe("Employee class", () => {
+    it("New Employee instance has 3 properties", () => {
+        const employee = new Employee('Bob', 1, 'bob@work.com');
+        const employeeProperties = Object.keys(employee);
+        expect(employeeProperties.length).toEqual(3);
+    });
+
     it("getName returns Employee name", () => {
         const employee = new Employee('Bob', 1, 'bob@work.com');
         const employeeName = employee.getName();
