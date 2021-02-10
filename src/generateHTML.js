@@ -1,12 +1,52 @@
 // renders manager info
-function renderManager(manager) {
-    return `<h1>${manager.getName()}</h1>
-    <p>
-        Role: ${manager.getRole()}<br>
-        Employee ID: ${manager.getId()}<br>
-        Email: ${manager.getEmail()}<br>
-        Office number: ${manager.officeNumber}
-    </p>`
+// function renderManager(manager) {
+
+// }
+
+//renders engineer info
+function renderTeamMembers(member) {
+    if (member.getRole() === 'Manager') {
+        return `<div>
+        <h1>${member.getName()}</h1>
+        <p>
+            Role: ${member.getRole()}<br>
+            Employee ID: ${member.getId()}<br>
+            Email: ${member.getEmail()}<br>
+            Office number: ${member.officeNumber}
+        </p>
+    </div>
+    `
+    } else if (member.getRole() === 'Engineer') {
+        return `<div>
+        <h1>${member.getName()}</h1>
+        <p>
+            Role: ${member.getRole()}<br>
+            Employee ID: ${member.getId()}<br>
+            Email: ${member.getEmail()}<br>
+            GitHub: ${member.github}
+        </p>
+    </div>
+    `
+    } else {
+        return `<div>
+        <h1>${member.getName()}</h1>
+        <p>
+            Role: ${member.getRole()}<br>
+            Employee ID: ${member.getId()}<br>
+            Email: ${member.getEmail()}<br>
+            School: ${member.school}
+        </p>
+    </div>
+    `
+    }
+}
+
+function renderTeam(arr) {
+    let html = "";
+    for (var i = 0; i < arr.length; i++) {
+        html += renderTeamMembers(arr[i]);
+    }
+    return html;
 }
 
 // generates team profile HTML page
@@ -16,7 +56,7 @@ function generateHTML(arr) {
 <head>
 </head>
 <body>
-    ${renderManager(arr[0])}
+    ${renderTeam(arr)}
 </body>
 </html>`)
 }
