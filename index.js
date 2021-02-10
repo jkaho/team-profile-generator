@@ -29,7 +29,9 @@ function nextPrompt() {
             internInfo();
             break;
         default:
-            generateHTML(team);
+            writeFileAsync('./dist/profile.html', generateHTML(team))
+            .then(() => console.log("New HTML file successfully generated!"))
+            .catch((err) => console.log("Opps, there was an error...", err))
             break;
     }
 }

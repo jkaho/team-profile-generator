@@ -67,7 +67,7 @@ function renderTeam(arr) {
 
 // Generates team profile HTML page template
 function generateHTML(arr) {
-    console.log(`<!DOCTYPE html>
+    return `<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -78,7 +78,7 @@ function generateHTML(arr) {
 <body>
     ${renderTeam(arr)}
 </body>
-</html>`)
+</html>`;
 }
 
 module.exports = generateHTML;
