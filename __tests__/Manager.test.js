@@ -11,5 +11,20 @@ describe("Manager class", () => {
     it("getName returns Manager name", () => {
         const managerName = manager.getName();
         expect(managerName).toEqual('Shirley');
-    })
+    });
+
+    it("getId returns Manager id", () => {
+        const managerId = manager.getId();
+        expect(managerId).toEqual(2);
+    });
+
+    it("getEmail returns Manager email", () => {
+        const managerEmail = manager.getEmail();
+        expect(managerEmail).toEqual('shirley@work.com');
+    });
+
+    it("getRole returns 'Manager'", () => {
+        const managerRole = manager.getRole();
+        expect(managerRole).toEqual('Manager');
+    });
 });
