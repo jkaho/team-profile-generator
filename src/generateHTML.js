@@ -1,42 +1,42 @@
 // Renders manager information
 function renderManager(manager) {
     return `<div>
-    <h1>${manager.getName()}</h1>
-    <p>
-        Role: ${manager.getRole()}<br>
-        Employee ID: ${manager.getId()}<br>
-        Email: ${manager.getEmail()}<br>
-        Office number: ${manager.officeNumber}
-    </p>
-</div>
+        <h1>${manager.getName()}</h1>
+        <p>
+            Role: ${manager.getRole()}<br>
+            Employee ID: ${manager.getId()}<br>
+            Email: ${manager.getEmail()}<br>
+            Office number: ${manager.officeNumber}
+        </p>
+    </div>
 `
 }
 
 // Renders engineer information
 function renderEngineer(engineer) {
     return `<div>
-    <h1>${engineer.getName()}</h1>
-    <p>
-        Role: ${engineer.getRole()}<br>
-        Employee ID: ${engineer.getId()}<br>
-        Email: ${engineer.getEmail()}<br>
-        GitHub: ${engineer.github}
-    </p>
-</div>
+        <h1>${engineer.getName()}</h1>
+        <p>
+            Role: ${engineer.getRole()}<br>
+            Employee ID: ${engineer.getId()}<br>
+            Email: ${engineer.getEmail()}<br>
+            GitHub: ${engineer.github}
+        </p>
+    </div>
 `
 }
 
 // Renders intern information
 function renderIntern(intern) {
     return `<div>
-    <h1>${intern.getName()}</h1>
-    <p>
-        Role: ${intern.getRole()}<br>
-        Employee ID: ${intern.getId()}<br>
-        Email: ${intern.getEmail()}<br>
-        School: ${intern.school}
-    </p>
-</div>
+        <h1>${intern.getName()}</h1>
+        <p>
+            Role: ${intern.getRole()}<br>
+            Employee ID: ${intern.getId()}<br>
+            Email: ${intern.getEmail()}<br>
+            School: ${intern.school}
+        </p>
+    </div>
 `
 }
 
@@ -76,7 +76,12 @@ function generateHTML(arr) {
     <title>Team Profile</title>
 </head>
 <body>
+    <header>
+        <h1>My Team</h1>
+    </header>
+    <main>
     ${renderTeam(arr)}
+    </main>
 </body>
 </html>`;
 }
