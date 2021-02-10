@@ -11,7 +11,7 @@ const { default: generate } = require('@babel/generator');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-const team = [];
+const team = [[],[],[]];
 
 let menuPick = "";
 function nextPrompt() {
@@ -81,7 +81,7 @@ const managerInfo = () => {
             answers.managerEmail,
             parseInt(answers.managerOfficeNumber)
         )
-        team.push(manager);
+        team[0].push(manager);
         nextPrompt();
     })
 }
@@ -135,7 +135,7 @@ const engineerInfo = () => {
             answers.engineerEmail,
             answers.engineerGithub
         )
-        team.push(engineer);
+        team[1].push(engineer);
         nextPrompt();
     })
 }
@@ -187,7 +187,7 @@ const internInfo = () => {
             answers.internEmail,
             answers.internSchool
         )
-        team.push(intern);
+        team[2].push(intern);
         nextPrompt();
     })
 }
