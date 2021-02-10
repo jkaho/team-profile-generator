@@ -105,9 +105,59 @@ const engineerInfo = () => {
             answers.engineerName, 
             parseInt(answers.engineerId),
             answers.engineerEmail,
-            parseInt(answers.engineerGithub)
+            answers.engineerGithub
         )
         return engineer;
+    })
+}
+
+const internInfo = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'internName',
+            message: 'Intern name:'
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: 'Intern id:'
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: 'Intern email:'
+        },
+        {
+            type: 'input',
+            name: 'internSchool',
+            message: 'Intern school:'
+        },
+        {
+            type: 'list',
+            name: 'menu',
+            message: 'Menu:',
+            choices: [
+                {
+                    name: 'Add an ENGINEER to my team'
+                },
+                {
+                    name: 'Add another INTERN to my team'
+                },
+                {
+                    name: 'My team is complete'
+                }
+            ]
+        }
+    ])
+    .then((answers) => {
+        const intern = new Intern(
+            answers.internName, 
+            parseInt(answers.internId),
+            answers.internEmail,
+            answers.internSchool
+        )
+        return intern;
     })
 }
 
