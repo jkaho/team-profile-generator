@@ -9,7 +9,25 @@ const { ConsoleWriter } = require('istanbul-lib-report');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-managerInfo();
+let menuPick = "";
+function nextPrompt() {
+    switch(menuPick) {
+        case 'Add an ENGINEER to my team':
+            engineerInfo();
+            break;
+        case 'Add an INTERN to my team':
+            internInfo();
+            break;
+        case 'Add another ENGINEER to my team':
+            engineerInfo();
+            break;
+        case 'Add another INTERN to my team':
+            internInfo();
+            break;
+        default:
+            break;
+    }
+}
 
 const managerInfo = () => {
     inquirer.prompt([
@@ -51,15 +69,18 @@ const managerInfo = () => {
         }
     ])
     .then((answers) => {
+        menuPick = answers.menu;
         const manager = new Manager(
             answers.managerName, 
             parseInt(answers.managerId),
             answers.managerEmail,
             parseInt(answers.managerOfficeNumber)
         )
-        return manager;
+        nextPrompt();
     })
 }
+
+managerInfo();
 
 const engineerInfo = () => {
     inquirer.prompt([
@@ -101,13 +122,14 @@ const engineerInfo = () => {
         }
     ])
     .then((answers) => {
+        menuPick = answers.menu;
         const engineer = new Engineer(
             answers.engineerName, 
             parseInt(answers.engineerId),
             answers.engineerEmail,
             answers.engineerGithub
         )
-        return engineer;
+        nextPrompt();
     })
 }
 
@@ -151,13 +173,14 @@ const internInfo = () => {
         }
     ])
     .then((answers) => {
+        menuPick = answers.menu;
         const intern = new Intern(
             answers.internName, 
             parseInt(answers.internId),
             answers.internEmail,
             answers.internSchool
         )
-        return intern;
+        nextPrompt();
     })
 }
 
