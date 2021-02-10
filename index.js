@@ -5,7 +5,9 @@ const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const generateHTML = require('./src/generateHTML');
 const { ConsoleWriter } = require('istanbul-lib-report');
+const { default: generate } = require('@babel/generator');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -27,6 +29,7 @@ function nextPrompt() {
             internInfo();
             break;
         default:
+            generateHTML(team);
             break;
     }
 }

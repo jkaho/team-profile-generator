@@ -6,12 +6,14 @@ function renderManager(manager) {
 
 // generates team profile HTML page
 function generateHTML(arr) {
-    return `<!DOCTYPE html>
+    console.log(`<!DOCTYPE html>
 <html>
 <head>
 </head>
 <body>
     ${renderManager(arr[0])}
 </body>
-</html>`
+</html>`)
 }
+
+module.exports = generateHTML;
