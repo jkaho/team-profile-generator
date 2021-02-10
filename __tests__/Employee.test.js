@@ -12,6 +12,18 @@ describe("Employee class", () => {
         expect(employeeName).toEqual('Bob');
     });
 
+    it("getId returns Employee id", () => {
+        const employee = new Employee('Bob', 1, 'bob@work.com');
+        const employeeId = employee.getId();
+        expect(employeeId).toEqual(1);
+    });
+
+    it("getEmail returns Employee email", () => {
+        const employee = new Employee('Bob', 1, 'bob@work.com');
+        const employeeEmail = employee.getEmail();
+        expect(employeeEmail).toEqual('bob@work.com');
+    });
+
     it("getRole returns the string 'Employee'", () => {
         const employee = new Employee();
         const role = employee.getRole();
