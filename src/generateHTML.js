@@ -19,7 +19,8 @@ function renderEngineer(engineer) {
         <p>
             Role: ${engineer.getRole()}<br>
             Employee ID: ${engineer.getId()}<br>
-            Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a><br>            GitHub: ${engineer.github}
+            Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a><br>            
+            GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a>
         </p>
     </div>
 `
@@ -32,7 +33,7 @@ function renderIntern(intern) {
         <p>
             Role: ${intern.getRole()}<br>
             Employee ID: ${intern.getId()}<br>
-            Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a><br>            GitHub: ${engineer.github}
+            Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a><br>            
             School: ${intern.school}
         </p>
     </div>
