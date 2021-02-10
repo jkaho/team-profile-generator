@@ -1,10 +1,5 @@
-// renders manager info
-// function renderManager(manager) {
-
-// }
-
-//renders engineer info
-function renderTeamMembers(member) {
+// Renders individual team members
+function renderTeamMember(member) {
     if (member.getRole() === 'Manager') {
         return `<div>
         <h1>${member.getName()}</h1>
@@ -41,15 +36,16 @@ function renderTeamMembers(member) {
     }
 }
 
+// Renders whole team 
 function renderTeam(arr) {
     let html = "";
     for (var i = 0; i < arr.length; i++) {
-        html += renderTeamMembers(arr[i]);
+        html += renderTeamMember(arr[i]);
     }
     return html;
 }
 
-// generates team profile HTML page
+// Generates team profile HTML page template
 function generateHTML(arr) {
     console.log(`<!DOCTYPE html>
 <html>
