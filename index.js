@@ -9,6 +9,8 @@ const { ConsoleWriter } = require('istanbul-lib-report');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
+const team = [];
+
 let menuPick = "";
 function nextPrompt() {
     switch(menuPick) {
@@ -76,6 +78,7 @@ const managerInfo = () => {
             answers.managerEmail,
             parseInt(answers.managerOfficeNumber)
         )
+        team.push(manager);
         nextPrompt();
     })
 }
@@ -129,6 +132,7 @@ const engineerInfo = () => {
             answers.engineerEmail,
             answers.engineerGithub
         )
+        team.push(engineer);
         nextPrompt();
     })
 }
@@ -180,6 +184,7 @@ const internInfo = () => {
             answers.internEmail,
             answers.internSchool
         )
+        team.push(intern);
         nextPrompt();
     })
 }
