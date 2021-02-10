@@ -6,10 +6,10 @@ const mock = jest.spyOn(inquirer, "prompt");
 mock.mockImplementation(() => Promise.resolve((answer) => answer.employeeName = 'Bob'));
 
 describe("Employee class", () => {
-    it("getName returns new Employee instance with prompt answers for name, id and email", () => {
-        const employee = new Employee();
+    it("getName returns Employee name", () => {
+        const employee = new Employee('Bob', 1, 'bob@work.com');
         const employeeName = employee.getName();
-        expect(employeeName.name).toEqual('Bob');
+        expect(employeeName).toEqual('Bob');
     });
 
     it("getRole returns the string 'Employee'", () => {
