@@ -2,8 +2,8 @@ const { expect, it } = require('@jest/globals');
 const Employee = require('../lib/Employee');
 const inquirer = require('inquirer');
 
-const mock = jest.spyOn(inquirer, "prompt");
-mock.mockImplementation(() => Promise.resolve((answer) => answer.employeeName = 'Bob'));
+// const mock = jest.spyOn(inquirer, "prompt");
+// mock.mockImplementation(() => Promise.resolve((answer) => answer.employeeName = 'Bob'));
 
 describe("Employee class", () => {
     it("New Employee instance has 3 properties", () => {
