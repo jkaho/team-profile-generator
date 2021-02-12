@@ -22,6 +22,7 @@ header h1 {
 main {
     width: 70%;
     margin: 0 auto;
+    margin-bottom: 50px;
 }
 
 .card {
@@ -89,6 +90,15 @@ main {
     background: rgb(35, 150, 129);
 }
 
+.card-bottom a {
+    text-decoration: none;
+    color: rgb(48, 131, 233);
+}
+
+.card-bottom a:hover {
+    color: rgb(2, 74, 162);
+}
+
 /* ----------- MEDIA QUERIES ----------- */
 @media (max-width: 1083px) {
     main {
@@ -97,7 +107,7 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 560px) {
     .card {
         display: block;
         margin: 10px auto;
