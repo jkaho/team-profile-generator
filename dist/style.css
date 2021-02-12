@@ -35,10 +35,6 @@ main {
     /* box-shadow: 10px 5px 5px grey; */
 }
 
-.card i {
-    /* margin: 0 85px; */
-}
-
 .card h2 {
     text-align: center;
     font-size: 18px;
@@ -79,10 +75,6 @@ main {
 
 .intern {
     border: solid 3px rgb(35, 150, 129);
-}
-
-.card-bottom {
-    /* background: white; */
 }
 
 .engineer .card-top {
