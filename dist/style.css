@@ -20,7 +20,8 @@ header h1 {
 }
 
 main {
-    width: 70%;
+    width: fit-content;
+    max-width: 70%;
     margin: 0 auto;
     margin-bottom: 50px;
 }
@@ -102,7 +103,7 @@ main {
 /* ----------- MEDIA QUERIES ----------- */
 @media (max-width: 1083px) {
     main {
-        width: 90%;
+        max-width: 90%;
         margin: 0 auto;
     }
 }
