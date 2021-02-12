@@ -15,16 +15,16 @@ const team = [[],[],[]];
 let menuPick = "";
 function nextPrompt() {
     switch(menuPick) {
-        case 'Add an ENGINEER to my team':
+        case 'Add an' + chalk.bold(' ENGINEER') + ' to my team':
             engineerInfo();
             break;
-        case 'Add an INTERN to my team':
+        case 'Add an' + chalk.bold(' INTERN') + ' to my team':
             internInfo();
             break;
-        case 'Add another ENGINEER to my team':
+        case 'Add another' + chalk.bold(' ENGINEER') + ' to my team':
             engineerInfo();
             break;
-        case 'Add another INTERN to my team':
+        case 'Add another' + chalk.bold(' INTERN') + ' to my team':
             internInfo();
             break;
         default:
@@ -36,24 +36,24 @@ function nextPrompt() {
 }
 
 function validateName(name) {
-    if (name.length <= 25) {
+    if (name.length <= 25 && name.length > 0) {
         return true;
     } 
-    return 'Name must be under 25 characters'
+    return chalk.redBright('Name must be between 1-25 characters (inclusive)')
 }
 
 function validateNumber(num) {
     if (/^[0-9]+$/.test(num)) {
         return true;
     } 
-    return 'Only numeric values are accepted'
+    return chalk.redBright('Only numeric values are accepted')
 }
 
 function validateEmail(email) {
     if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email)) {
         return true;
     }
-    return 'Please input a valid email address'
+    return chalk.redBright('Please input a valid email address')
 }
 
 const managerInfo = () => {
@@ -192,7 +192,7 @@ const internInfo = () => {
         {
             type: 'input',
             name: 'internSchool',
-            message: 'Intern' + chalk.italic(' id') + ':'
+            message: 'Intern' + chalk.italic(' school') + ':'
         },
         {
             type: 'list',
