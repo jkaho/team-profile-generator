@@ -42,11 +42,18 @@ function validateName(name) {
     return 'Name must be under 25 characters'
 }
 
-function validateId(id) {
-    if (/[0-9]+/.test(id)) {
+function validateNumber(num) {
+    if (/^[0-9]+$/.test(num)) {
         return true;
     } 
-    return 'ID must contain at least one number'
+    return 'Only numeric values are accepted'
+}
+
+function validateEmail(email) {
+    if (/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email)) {
+        return true;
+    }
+    return 'Please input a valid email address'
 }
 
 const managerInfo = () => {
@@ -61,17 +68,19 @@ const managerInfo = () => {
             type: 'input',
             name: 'managerId',
             message: 'Team manager ' + chalk.italic('employee ID') + ':',
-            validate: validateId
+            validate: validateNumber
         },
         {
             type: 'input',
             name: 'managerEmail',
-            message: 'Team manager ' + chalk.italic('email') + ':'
+            message: 'Team manager ' + chalk.italic('email') + ':',
+            validate: validateEmail
         },
         {
             type: 'input',
             name: 'managerOfficeNumber',
-            message: 'Team manager ' + chalk.italic('office number') + ':'
+            message: 'Team manager ' + chalk.italic('office number') + ':',
+            validate: validateNumber
         },
         {
             type: 'list',
@@ -117,12 +126,13 @@ const engineerInfo = () => {
             type: 'input',
             name: 'engineerId',
             message: 'Engineer' + chalk.italic(' employee ID') + ':',
-            validate: validateId
+            validate: validateNumber
         },
         {
             type: 'input',
             name: 'engineerEmail',
-            message: 'Engineer' + chalk.italic(' email') + ':'
+            message: 'Engineer' + chalk.italic(' email') + ':',
+            validate: validateEmail
         },
         {
             type: 'input',
@@ -171,12 +181,13 @@ const internInfo = () => {
             type: 'input',
             name: 'internId',
             message: 'Intern' + chalk.italic(' employee ID') + ':',
-            validate: validateId
+            validate: validateNumber
         },
         {
             type: 'input',
             name: 'internEmail',
-            message: 'Intern' + chalk.italic(' email') + ':'
+            message: 'Intern' + chalk.italic(' email') + ':',
+            validate: validateEmail
         },
         {
             type: 'input',
