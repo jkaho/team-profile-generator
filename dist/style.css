@@ -1,8 +1,8 @@
 * {
     box-sizing: border-box;
 }
+
 body {
-    /* background: rgb(250, 250, 249); */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -89,6 +89,7 @@ main {
     background: rgb(35, 150, 129);
 }
 
+/* ----------- MEDIA QUERIES ----------- */
 @media (max-width: 1083px) {
     main {
         width: 90%;
