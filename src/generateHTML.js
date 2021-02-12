@@ -27,7 +27,7 @@ function renderEngineer(engineer) {
             <p>
                 <i class="far fa-id-card"></i> ID #${engineer.getId()}<br>
                 <i class="far fa-envelope"></i> <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a><br>            
-                <i class="fab fa-github"></i> <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a>
+                <i class="fab fa-github"></i> <a href="https://github.com/${engineer.getGithub()}" target="_blank">${engineer.getGithub()}</a>
             </p>
         </div>
     </div>
