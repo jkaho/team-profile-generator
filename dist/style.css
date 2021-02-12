@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     /* background: rgb(250, 250, 249); */
     font-family: 'Poppins', sans-serif;
@@ -96,7 +99,7 @@ main {
 
 @media (max-width: 1083px) {
     main {
-        width: 99%;
+        width: 90%;
         margin: 0 auto;
     }
 }
@@ -120,13 +123,17 @@ main {
         border-bottom-left-radius: 14px;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
-        padding: 10px auto;
-        height: max-content;
+        height: fit-content;
     }
 
     .card-bottom {
         display: inline-block;
         vertical-align: top;
         width: 180px;
+        height: fit-content;
+    }
+
+    .card-bottom p {
+        margin: 0;
     }
 }
