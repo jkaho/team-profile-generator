@@ -42,6 +42,13 @@ function validateName(name) {
     return 'Name must be under 25 characters'
 }
 
+function validateId(id) {
+    if (/[0-9]+/.test(id)) {
+        return true;
+    } 
+    return 'ID must contain at least one number'
+}
+
 const managerInfo = () => {
     inquirer.prompt([
         {
@@ -53,7 +60,8 @@ const managerInfo = () => {
         {
             type: 'input',
             name: 'managerId',
-            message: 'Team manager ' + chalk.italic('employee id') + ':'
+            message: 'Team manager ' + chalk.italic('employee ID') + ':',
+            validate: validateId
         },
         {
             type: 'input',
@@ -108,7 +116,8 @@ const engineerInfo = () => {
         {
             type: 'input',
             name: 'engineerId',
-            message: 'Engineer' + chalk.italic(' employee id') + ':'
+            message: 'Engineer' + chalk.italic(' employee ID') + ':',
+            validate: validateId
         },
         {
             type: 'input',
@@ -161,7 +170,8 @@ const internInfo = () => {
         {
             type: 'input',
             name: 'internId',
-            message: 'Intern' + chalk.italic(' employee id') + ':'
+            message: 'Intern' + chalk.italic(' employee ID') + ':',
+            validate: validateId
         },
         {
             type: 'input',
