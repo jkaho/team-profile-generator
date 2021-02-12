@@ -56,6 +56,13 @@ function validateEmail(email) {
     return chalk.redBright('Please input a valid email address')
 }
 
+function validateGithub(github) {
+    if (/^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i.test(github)) {
+        return true;
+    } 
+    return chalk.redBright('Please input a valid GitHub username')
+}
+
 const managerInfo = () => {
     inquirer.prompt([
         {
@@ -137,7 +144,8 @@ const engineerInfo = () => {
         {
             type: 'input',
             name: 'engineerGithub',
-            message: 'Engineer' + chalk.italic(' GitHub username') + ':'
+            message: 'Engineer' + chalk.italic(' GitHub username') + ':',
+            validate: validateGithub
         },
         {
             type: 'list',
