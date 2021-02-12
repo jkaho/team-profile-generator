@@ -6,8 +6,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./src/generateHTML');
-const { ConsoleWriter } = require('istanbul-lib-report');
-const { default: generate } = require('@babel/generator');
+const chalk = require('chalk');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -30,8 +29,8 @@ function nextPrompt() {
             break;
         default:
             writeFileAsync('./dist/profile.html', generateHTML(team))
-            .then(() => console.log("New HTML file successfully generated!"))
-            .catch((err) => console.log("Opps, there was an error...", err))
+            .then(() => console.log(chalk.black.bgGreenBright(" New HTML file successfully generated! ")))
+            .catch((err) => console.log(chalk.black.bgRedBright(" Opps, there was an error... ", err)))
             break;
     }
 }
@@ -41,33 +40,33 @@ const managerInfo = () => {
         {
             type: 'input',
             name: 'managerName',
-            message: 'Team manager name:'
+            message: 'Team manager ' + chalk.italic('name') + ':'
         },
         {
             type: 'input',
             name: 'managerId',
-            message: 'Team manager id:'
+            message: 'Team manager ' + chalk.italic('employee id') + ':'
         },
         {
             type: 'input',
             name: 'managerEmail',
-            message: 'Team manager email:'
+            message: 'Team manager ' + chalk.italic('email') + ':'
         },
         {
             type: 'input',
             name: 'managerOfficeNumber',
-            message: 'Team manager office number:'
+            message: 'Team manager ' + chalk.italic('office number') + ':'
         },
         {
             type: 'list',
             name: 'menu',
-            message: 'Menu:',
+            message: chalk.yellow('--------- Menu --------- \nChoose one of the following options:'),
             choices: [
                 {
-                    name: 'Add an ENGINEER to my team'
+                    name: 'Add an' + chalk.bold(' ENGINEER') + ' to my team'
                 },
                 {
-                    name: 'Add an INTERN to my team'
+                    name: 'Add an' + chalk.bold(' INTERN') + ' to my team'
                 },
                 {
                     name: 'My team is complete'
@@ -95,33 +94,33 @@ const engineerInfo = () => {
         {
             type: 'input',
             name: 'engineerName',
-            message: 'Engineer name:'
+            message: 'Engineer' + chalk.italic(' name') + ':'
         },
         {
             type: 'input',
             name: 'engineerId',
-            message: 'Engineer id:'
+            message: 'Engineer' + chalk.italic(' employee id') + ':'
         },
         {
             type: 'input',
             name: 'engineerEmail',
-            message: 'Engineer email:'
+            message: 'Engineer' + chalk.italic(' email') + ':'
         },
         {
             type: 'input',
             name: 'engineerGithub',
-            message: 'Engineer Github username:'
+            message: 'Engineer' + chalk.italic(' GitHub username') + ':'
         },
         {
             type: 'list',
             name: 'menu',
-            message: 'Menu:',
+            message: chalk.yellow('--------- Menu --------- \nChoose one of the following options:'),
             choices: [
                 {
-                    name: 'Add another ENGINEER to my team'
+                    name: 'Add another' + chalk.bold(' ENGINEER') + ' to my team'
                 },
                 {
-                    name: 'Add an INTERN to my team'
+                    name: 'Add an' + chalk.bold(' INTERN') + ' to my team'
                 },
                 {
                     name: 'My team is complete'
@@ -147,33 +146,33 @@ const internInfo = () => {
         {
             type: 'input',
             name: 'internName',
-            message: 'Intern name:'
+            message: 'Intern' + chalk.italic(' name') + ':'
         },
         {
             type: 'input',
             name: 'internId',
-            message: 'Intern id:'
+            message: 'Intern' + chalk.italic(' employee id') + ':'
         },
         {
             type: 'input',
             name: 'internEmail',
-            message: 'Intern email:'
+            message: 'Intern' + chalk.italic(' email') + ':'
         },
         {
             type: 'input',
             name: 'internSchool',
-            message: 'Intern school:'
+            message: 'Intern' + chalk.italic(' id') + ':'
         },
         {
             type: 'list',
             name: 'menu',
-            message: 'Menu:',
+            message: chalk.yellow('--------- Menu --------- \nChoose one of the following options:'),
             choices: [
                 {
-                    name: 'Add an ENGINEER to my team'
+                    name: 'Add an' + chalk.bold(' ENGINEER') + ' to my team'
                 },
                 {
-                    name: 'Add another INTERN to my team'
+                    name: 'Add another' + chalk.bold(' INTERN') + ' to my team'
                 },
                 {
                     name: 'My team is complete'

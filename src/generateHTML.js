@@ -5,7 +5,7 @@ function renderManager(manager) {
             <h2>${manager.getName()}</h2>
             <h3><i class="fas fa-user-tie"></i> ${manager.getRole()}</h3>
         </div>
-        <div class="card-bottom>
+        <div class="card-bottom">
             <p>
             <i class="far fa-id-card"></i> ID #${manager.getId()}<br>
             <i class="far fa-envelope"></i> <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a><br>
@@ -93,7 +93,7 @@ function generateHTML(arr) {
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
     crossorigin="anonymous"
     /> 
-    <link rel="stylesheet" href="./profile.html">
+    <link rel="stylesheet" href="./style.css">
     <title>Team Profile</title>
 </head>
 <body>
