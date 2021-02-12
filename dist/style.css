@@ -25,7 +25,6 @@ main {
     display: inline-block;
     font-size: 14px;
     margin: 10px;
-    background: white;
     border-radius: 20px;
     width: 220px;
     height: fit-content;
@@ -56,8 +55,8 @@ main {
 
 .card-top {
     color: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
     padding: 10px;
 }
 
@@ -68,20 +67,66 @@ main {
 }
 
 .manager {
-    background: rgb(16, 136, 242);
     border: solid 3px rgb(16, 136, 242);
 }
 
 .engineer {
-    background: rgb(237, 164, 5);
     border: solid 3px rgb(237, 164, 5);
 }
 
 .intern {
-    background: rgb(35, 150, 129);
     border: solid 3px rgb(35, 150, 129);
 }
 
 .card-bottom {
-    background: white;
+    /* background: white; */
+}
+
+.engineer .card-top {
+    background: rgb(237, 164, 5);
+}
+
+.manager .card-top {
+    background: rgb(16, 136, 242);
+}
+
+.intern .card-top {
+    background: rgb(35, 150, 129);
+}
+
+@media (max-width: 1083px) {
+    main {
+        width: 99%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        display: block;
+        margin: 10px auto;
+        width: fit-content;
+        height: fit-content;
+        font-size: 11px;
+    }
+
+    .card h2 {
+        font-size: 14px;
+    }
+
+    .card-top {
+        display: inline-block;
+        width: 120px;
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        padding: 10px auto;
+        height: max-content;
+    }
+
+    .card-bottom {
+        display: inline-block;
+        vertical-align: top;
+        width: 180px;
+    }
 }
