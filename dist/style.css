@@ -1,15 +1,82 @@
 body {
-    background: rgb(250, 250, 249);
-}
+    /* background: rgb(250, 250, 249); */
+    font-family: 'Poppins', sans-serif;}
 
 header {
-    text-align: center;
+    margin: 30px 0 10px 50px;
+}
+
+header h1 {
+    font-weight: 200;
+    font-size: 50px;
+    margin: 0;
+}
+
+#team-span {
+    font-weight: 500;
 }
 
 .card {
     display: inline-block;
-    margin: 15px;
-    padding: 15px;
+    font-size: 14px;
+    margin: 10px;
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
+    width: 220px;
+    height: fit-content;
+    vertical-align: top;
+    /* box-shadow: 10px 5px 5px grey; */
+}
+
+.card i {
+    /* margin: 0 85px; */
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.card h3 {
+    text-align: center;
+    font-weight: 300;
+    margin: 0;
+}
+
+.card p {
+    margin-top: 0;
+}
+
+.card-top {
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+}
+
+.card-bottom {
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    padding: 10px;
+}
+
+.manager {
+    background: rgb(16, 136, 242);
+    border: solid 3px rgb(16, 136, 242);
+}
+
+.engineer {
+    background: rgb(237, 164, 5);
+    border: solid 3px rgb(237, 164, 5);
+}
+
+.intern {
+    background: rgb(35, 150, 129);
+    border: solid 3px rgb(35, 150, 129);
+}
+
+.card-bottom {
+    background: white;
 }

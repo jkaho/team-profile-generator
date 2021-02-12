@@ -131,7 +131,7 @@ const engineerInfo = () => {
     ])
     .then((answers) => {
         menuPick = answers.menu;
-        let engineer = new Engineer(
+        const engineer = new Engineer(
             answers.engineerName, 
             parseInt(answers.engineerId),
             answers.engineerEmail,
@@ -183,7 +183,7 @@ const internInfo = () => {
     ])
     .then((answers) => {
         menuPick = answers.menu;
-        let intern = new Intern(
+        const intern = new Intern(
             answers.internName, 
             parseInt(answers.internId),
             answers.internEmail,
