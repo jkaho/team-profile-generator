@@ -35,12 +35,20 @@ function nextPrompt() {
     }
 }
 
+function validateName(name) {
+    if (name.length <= 25) {
+        return true;
+    } 
+    return 'Name must be under 25 characters'
+}
+
 const managerInfo = () => {
     inquirer.prompt([
         {
             type: 'input',
             name: 'managerName',
-            message: 'Team manager ' + chalk.italic('name') + ':'
+            message: 'Team manager ' + chalk.italic('name') + ' (max. 25 characters):',
+            validate: validateName
         },
         {
             type: 'input',
@@ -94,7 +102,8 @@ const engineerInfo = () => {
         {
             type: 'input',
             name: 'engineerName',
-            message: 'Engineer' + chalk.italic(' name') + ':'
+            message: 'Engineer' + chalk.italic(' name') + ' (max. 25 characters):',
+            validate: validateName
         },
         {
             type: 'input',
@@ -146,7 +155,8 @@ const internInfo = () => {
         {
             type: 'input',
             name: 'internName',
-            message: 'Intern' + chalk.italic(' name') + ':'
+            message: 'Intern' + chalk.italic(' name') + ' (max. 25 characters):',
+            validate: validateName
         },
         {
             type: 'input',
