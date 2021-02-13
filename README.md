@@ -12,6 +12,8 @@ The user must input information about a team manager, and can also choose to add
 
 ## Video Walkthrough
 
+[Click here](https://drive.google.com/file/d/1EgfNIgPM4sPaRfBSZoKfzu68dSq631Oc/view) to watch a video walkthrough of the application tests & functionality.
+
 ## Technologies Used 
 - JavaScript
 - Command-line interface
