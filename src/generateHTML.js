@@ -94,6 +94,7 @@ function generateHTML(arr) {
     crossorigin="anonymous"
     /> 
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     <title>Team Profile</title>
 </head>
 <body>
