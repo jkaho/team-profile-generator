@@ -5,6 +5,15 @@
 This is a command-line application that generates simple team profile HTML files from the user's responses to the command-line prompts.
 The user must input information about a team manager, and can also choose to add however many engineers and interns as needed to the team.
 
+## Table of Contents
+
+- [Installation](#Installation)
+- [Tests](#Tests)
+- [Video Walkthrough](#Video-Walkthrough)
+- [Technologies Used](#Technologies-Used)
+- [Screenshots](#Screenshots)
+- [Questions](#Questions)
+
 ## Installation 
 
 1. Clone this repository to your local computer 
@@ -36,7 +45,7 @@ The user must input information about a team manager, and can also choose to add
 ![Team Profile Generator application interface](images/application.png)
 
 ### Generated HTML file source code
-![Generated HTML file](images/code.png)
+<!-- ![Generated HTML file](images/code.png) -->
 
 ### Team profile HTML page
 
