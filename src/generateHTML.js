@@ -59,6 +59,7 @@ function renderTeam(arr) {
         html += renderManager(arr[0][i]);
     }
 
+    // Sorts engineer array (within team array) by ID (ascending)
     arr[1].sort(function(a, b) {
         return a.id - b.id;
     })
@@ -67,6 +68,7 @@ function renderTeam(arr) {
         html += renderEngineer(arr[1][i]);
     }
 
+    // Sorts intern array (within team array) by ID (ascending)
     arr[2].sort(function(a, b) {
         return a.id - b.id;
     })
