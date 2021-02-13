@@ -68,7 +68,7 @@ const managerInfo = () => {
         {
             type: 'input',
             name: 'managerName',
-            message: 'Team manager ' + chalk.italic('name') + ' (max. 25 characters):',
+            message: 'Team manager ' + chalk.italic('name') + ' (1-25 characters):',
             validate: validateName
         },
         {
@@ -126,7 +126,7 @@ const engineerInfo = () => {
         {
             type: 'input',
             name: 'engineerName',
-            message: 'Engineer' + chalk.italic(' name') + ' (max. 25 characters):',
+            message: 'Engineer' + chalk.italic(' name') + ' (1-25 characters):',
             validate: validateName
         },
         {
@@ -182,7 +182,7 @@ const internInfo = () => {
         {
             type: 'input',
             name: 'internName',
-            message: 'Intern' + chalk.italic(' name') + ' (max. 25 characters):',
+            message: 'Intern' + chalk.italic(' name') + ' (1-25 characters):',
             validate: validateName
         },
         {
