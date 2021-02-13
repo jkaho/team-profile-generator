@@ -1,17 +1,20 @@
+// Dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generateHTML = require('./src/generateHTML');
 const chalk = require('chalk');
 
+// writeFile function
 const writeFileAsync = util.promisify(fs.writeFile);
 
+// Team array [[manager], [engineer/s], [intern/s]]
 const team = [[],[],[]];
 
+// Runs next function according to inquirer prompt menu selection
 let menuPick = "";
 function nextPrompt() {
     switch(menuPick) {
@@ -35,6 +38,7 @@ function nextPrompt() {
     }
 }
 
+// Prompt validation functions
 function validateName(name) {
     if (name.length <= 25 && name.length > 0) {
         return true;
@@ -63,6 +67,7 @@ function validateGithub(github) {
     return chalk.redBright('Please input a valid GitHub username')
 }
 
+// Manager prompts
 const managerInfo = () => {
     inquirer.prompt([
         {
@@ -116,11 +121,10 @@ const managerInfo = () => {
         )
         team[0].push(manager);
         nextPrompt();
-    })
+    });
 }
 
-managerInfo();
-
+// Engineer prompts
 const engineerInfo = () => {
     inquirer.prompt([
         {
@@ -174,9 +178,10 @@ const engineerInfo = () => {
         )
         team[1].push(engineer);
         nextPrompt();
-    })
+    });
 }
 
+// Intern prompts
 const internInfo = () => {
     inquirer.prompt([
         {
@@ -229,6 +234,7 @@ const internInfo = () => {
         )
         team[2].push(intern);
         nextPrompt();
-    })
+    });
 }
 
+managerInfo();

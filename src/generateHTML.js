@@ -1,6 +1,6 @@
 // Renders manager information
 function renderManager(manager) {
-    return `    <div class="card manager">
+    return `    <div class="card manager flex-container">
             <div class="card-top">
                 <h2>${manager.getName()}</h2>
                 <h3><i class="fas fa-user-tie"></i> ${manager.getRole()}</h3>
@@ -18,7 +18,7 @@ function renderManager(manager) {
 
 // Renders engineer information
 function renderEngineer(engineer) {
-    return `        <div class="card engineer">
+    return `        <div class="card engineer flex-container">
             <div class="card-top">
                 <h2>${engineer.getName()}</h2>
                 <h3><i class="fas fa-laptop-code"></i> ${engineer.getRole()}</h3>
@@ -36,7 +36,7 @@ function renderEngineer(engineer) {
 
 // Renders intern information
 function renderIntern(intern) {
-    return `        <div class="card intern">
+    return `        <div class="card intern flex-container">
             <div class="card-top">
                 <h2>${intern.getName()}</h2>
                 <h3><i class="fas fa-user-graduate"></i> ${intern.getRole()}</h3>

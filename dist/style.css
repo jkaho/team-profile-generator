@@ -113,8 +113,12 @@ main {
         display: block;
         margin: 10px auto;
         width: fit-content;
-        height: fit-content;
         font-size: 11px;
+    }
+
+    .flex-container {
+        display: -webkit-flex;
+        display: flex;
     }
 
     .card h2 {
@@ -123,18 +127,16 @@ main {
 
     .card-top {
         display: inline-block;
-        width: 120px;
         border-bottom-left-radius: 14px;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
-        height: fit-content;
+        width: 120px;
     }
 
     .card-bottom {
         display: inline-block;
         vertical-align: top;
         width: 180px;
-        height: fit-content;
     }
 
     .card-bottom p {
