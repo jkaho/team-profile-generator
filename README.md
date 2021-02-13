@@ -45,7 +45,7 @@ The user must input information about a team manager, and can also choose to add
 ![Team Profile Generator application interface](images/application.png)
 
 ### Generated HTML file source code
-<!-- ![Generated HTML file](images/code.png) -->
+![Generated HTML file](images/code.png)
 
 ### Team profile HTML page
 
