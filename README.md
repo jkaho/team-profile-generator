@@ -12,6 +12,7 @@ The user must input information about a team manager, and can also choose to add
 - [Video Walkthrough](#Video-Walkthrough)
 - [Technologies Used](#Technologies-Used)
 - [Screenshots](#Screenshots)
+- [Note](#Note)
 - [Questions](#Questions)
 
 ## Installation 
@@ -56,6 +57,10 @@ The user must input information about a team manager, and can also choose to add
 
 #### Responsive design
 ![Generated HTML file responsive design](images/browser-responsive.png)
+
+## Note 
+
+*Please note that the style.css link path in the sample generated HTML file (sample/profile-sample.html), line 15, has been changed due to file placement within the directory structure.*
 
 ## Questions
 
