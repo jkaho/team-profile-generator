@@ -1,3 +1,5 @@
+/* ---- GENERAL ---- */
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +7,8 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+/* ---- 'OUR TEAM' HEADING ---- */
 
 header {
     text-align: center;
@@ -19,6 +23,8 @@ header h1 {
     font-weight: 500;
 }
 
+/* ---- MAIN ---- */
+
 main {
     width: fit-content;
     max-width: 70%;
@@ -26,6 +32,7 @@ main {
     margin-bottom: 50px;
 }
 
+/* Profile cards */
 .card {
     display: inline-block;
     font-size: 14px;
@@ -100,7 +107,8 @@ main {
     color: rgb(2, 74, 162);
 }
 
-/* ----------- MEDIA QUERIES ----------- */
+/* ---- MEDIA QUERIES ---- */
+
 @media (max-width: 1083px) {
     main {
         max-width: 90%;
