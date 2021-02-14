@@ -33,7 +33,7 @@ function nextPrompt() {
         default:
             writeFileAsync('./dist/profile.html', generateHTML(team))
             .then(() => console.log(chalk.black.bgGreenBright(" New HTML file successfully generated! ")))
-            .catch((err) => console.log(chalk.black.bgRedBright(" Opps, there was an error... ", err)))
+            .catch((err) => console.log(chalk.black.bgRedBright(" Oops, there was an error... ", err)))
             break;
     }
 }
