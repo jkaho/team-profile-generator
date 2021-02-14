@@ -38,6 +38,8 @@ The user must input information about a team manager, and can also choose to add
 - npm jest package 
 - HTML
 - CSS 
+- Google Fonts
+- Font Awesome
 
 ## Screenshots 
 
