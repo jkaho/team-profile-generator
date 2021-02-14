@@ -29,7 +29,7 @@ describe("Engineer class", () => {
     });
 
     describe("getGithub()", () => {
-        it("returns Engineer github username", () => {
+        it("returns Engineer GitHub username", () => {
             const engineerGithub = engineer.getGithub();
             expect(engineerGithub).toEqual('greghub');
         });
