@@ -34,7 +34,7 @@ The user must input information about a team manager, and can also choose to add
 ## Technologies Used 
 - JavaScript
 - Command-line interface
-- node.js
+- Node.js
 - npm inquirer package
 - npm jest package 
 - HTML
