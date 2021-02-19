@@ -37,6 +37,7 @@ The user must input information about a team manager, and can also choose to add
 - Node.js
 - npm inquirer package
 - npm jest package 
+- npm chalk
 - HTML
 - CSS 
 - Google Fonts
